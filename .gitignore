@@ -63,7 +63,6 @@ typings/
 .env
 
 dist/
-lib/
 
 ### VisualStudioCode ###
 .vscode/*
