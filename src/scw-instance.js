@@ -84,6 +84,7 @@ export default class Instance extends ScalewayBase {
       const ips = await this.api.get(`${zone}/ips`);
       return ips.data.ips;
     } catch (err) {
+      if (!err.data) throw err;
       console.error(`IP list failed: ${err.message} - ${err.response.data.message}`);
       throw err.response.data;
     }
